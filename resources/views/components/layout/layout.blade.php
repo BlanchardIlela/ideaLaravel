@@ -15,5 +15,12 @@
         {{ $slot }}
     </main>
 
+    {{-- Remplacez le bloc @section par un simple test de session --}}
+    @if (session('success'))
+        <div class="bg-green-100 text-green-800 p-4 rounded mb-4">
+            {{ session('success') }}
+        </div>
+    @endif
+
 </body>
 </html>
